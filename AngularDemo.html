@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>This is Angular learning demo</title>
+
+    <!--<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}; points=[1,15,19,2,40]">-->
+
+        <!--<p>Input something in the input box:</p>-->
+        <!--<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>-->
+        <!--<h1>Hello {{name}}</h1>-->
+
+        <!--&lt;!&ndash;type color in the text and see the magic&ndash;&gt;-->
+        <!--<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">-->
+
+        <!--&lt;!&ndash;initiate with an object&ndash;&gt;-->
+        <!--<p>The name is {{ person.lastName }}</p>-->
+
+        <!--&lt;!&ndash;initiate with an array&ndash;&gt;-->
+        <!--<p>The third result is {{ points[2] }}</p>-->
+
+    <!--</div>-->
+
+
+
+
+
+
+
+    <!--If you remove the ng-app directive, HTML will display the expression as it is, without solving it:-->
+
+
+
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    {{ firstName + " " + lastName }}
+</div>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+        $scope.firstName = "John";
+        $scope.lastName = "Doe";
+    });
+</script>
+</head>
+</body>
+</html>
